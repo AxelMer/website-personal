@@ -18,7 +18,7 @@ module.exports = {
           {
             loader: 'sass-loader',
             options: {
-              sourceMap: true,
+              sourceMap: false,
               // options...
             }
           }
@@ -27,7 +27,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'css/mystyles.css'
+      filename: 'src/css/global.scss'
     }),
   ]
 };

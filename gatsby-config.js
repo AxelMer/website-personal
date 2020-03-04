@@ -1,13 +1,18 @@
 module.exports = {
   siteMetadata: {
-    title: `Proyecto 1`,
+    title: `WebPerson`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `AxTin`,
   },
   plugins: [
     `gatsby-plugin-netlify-cms`,
-    `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        implementation: require("sass"),
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -20,11 +25,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `gatsby-WebPerson`,
+        short_name: `WebPerson`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#000000`,
+        theme_color: `#000000`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },

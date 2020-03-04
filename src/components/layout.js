@@ -8,17 +8,18 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import "../mystyle.scss"
 
+import Footer from "./footer"
 import Header from "./header"
-import "./layout.css"
+import "../css/layout.scss"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
         siteMetadata {
-          title
+          title,
+          author
         }
       }
     }
@@ -35,11 +36,7 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="#">AxTin</a>
-        </footer>
+        <Footer authorTitle={data.site.siteMetadata.author} />
       </div>
     </>
   )
