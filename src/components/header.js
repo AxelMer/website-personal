@@ -1,11 +1,11 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import "../mystyle.scss"
 
 const Header = ({ siteTitle }) => (
-  <header
+  <header className="header"
     style={{
-      background: `rebeccapurple`,
       marginBottom: `1.45rem`,
     }}
   >
@@ -26,6 +26,15 @@ const Header = ({ siteTitle }) => (
         >
           {siteTitle}
         </Link>
+        <Link
+          to="/page-2"
+          style={{
+            color: `white`,
+            textDecoration: `none`,
+          }}>
+          Login
+        </Link>
+        <Link to="/">Projectos</Link>
       </h1>
     </div>
   </header>
