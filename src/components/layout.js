@@ -36,8 +36,8 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <Footer authorTitle={data.site.siteMetadata.author} />
       </div>
+      <Footer authorTitle={data.site.siteMetadata.author} />
     </>
   )
 }

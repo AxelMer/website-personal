@@ -1,7 +1,7 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-
+import "../css/global.scss"
 
 const Header = ({ siteTitle }) => (
   <header className="header">
@@ -15,6 +15,7 @@ const Header = ({ siteTitle }) => (
           <div className="navbar-brand">
             <h1>
               <Link
+              className="Logo"
                 to="/"
               >
                 {siteTitle}

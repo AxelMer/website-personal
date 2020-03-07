@@ -1,6 +1,4 @@
 @charset "utf-8";
-// If need, change your variables before importing Bulma
-$title-color: #ff0000;
 //Import elements bulma
 @import "../../node_modules/bulma/sass/utilities/_all.sass";
 @import "../../node_modules/bulma/sass/layout/_all.sass";
@@ -43,17 +41,17 @@ $warning: $yellow;
 $danger: $red;
 $dark: $grey-darker;
 $text: $grey-dark;
-$background:$pink;
-$scheme-main-bis:$purple;
+$background: $pink;
+$scheme-main-bis: $purple;
 // Update some of Bulma's component variables
 $body-background-color: $breeze;
 $control-border-width: 2px;
 $input-border-color: transparent;
 $input-shadow: none;
-$box-background-color:$scheme-main;
+$box-background-color: $scheme-main;
 $message-header-padding:0.75em;
-$message-background-color:$background;
-$navbar-item-hover-background-color:$scheme-main-bis;
+$message-background-color: $background;
+$navbar-item-hover-background-color: $scheme-main-bis;
 $font-stack: Helvetica, sans-serif;
 $background-primary: #000000;
 
@@ -61,20 +59,50 @@ body {
     background: $black;
     margin-bottom: 1.45rem;
 }
-.header{
-    background: $black;
-}
-.navbar{
-    text-decoration: none;
-}
 
 
-//Footer Style variables
+//Header and Footer  Style variables
 $background: #2d3436;
-$padding: 3rem;
+$backgroundHover: #2d3436;
+$padding: 1.5rem;
+$sizeFont: 24px;
+$textColor: #55efc4;
+$textHover: #ff7675;
 
+.header{
+    background: $background;
+    text-decoration: none;
+    .navbar{
+        background: $background;
+        .navbar-item{
+            background: $backgroundHover;
+            color:$textColor;
+        }
+        .navbar-item:hover{
+            color: $textHover;
+        }
+        .logo{
+            color: $textColor;
+        }.logo:hover{
+            color: $textHover;
+        }
+    }
+}
 .footer{
     background: $background;
     padding: $padding;
-
+    font-size: $sizeFont;
+    text-decoration: none;
+    .author{
+        color: $textColor;
+    }.author:hover{
+        color: $textHover
+    }
+    i{
+        color: $textColor;
+        padding: 1rem;
+        margin: 1rem;
+    }i:hover{
+        color: $textHover;
+    }
 }

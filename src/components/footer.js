@@ -1,39 +1,28 @@
 //import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import '../utils/fontawesome'
 import "../css/global.scss"
 
 const footer = ({ authorTitle }) => (
     <footer className="footer">
-        <nav class="level">
-            <div class="level-item has-text-centered">
-                <div>
-                <i class="fab fa-linkedin fa-3x"></i>
+        <div className="level has-text-centered">
+            <div className="level-item">
+                <div className="social has-text-centered">
+                    <a><i><FontAwesomeIcon icon={['fab', 'youtube']} size="2x" /></i></a>
+                    <a><i><FontAwesomeIcon icon={['fab', 'twitter']} size="2x" /></i></a>
+                    <a><i><FontAwesomeIcon icon={['fab', 'instagram']} size="2x" /></i></a>
+                    <a><i><FontAwesomeIcon icon={['fab', 'facebook']} size="2x" /></i></a>
                 </div>
             </div>
-            <div class="level-item has-text-centered">
-                <div>
-                <i class="fab fa-twitter fa-3x"></i>
-                </div>
-            </div>
-            <div class="level-item has-text-centered">
-                <div>
-                <i class="fab fa-facebook fa-3x"></i>
-                </div>
-            </div>
-            <div class="level-item has-text-centered">
-                <div>
-                <i class="fab fa-instagram fa-3x"></i>
-                </div>
-            </div>
-        </nav>
+        </div>
         <div className="has-text-centered">
             © {new Date().getFullYear()}, Este sitio web fue creado por
     {` `}
-            <a href="/">{authorTitle}</a>
+        <a className="author" href="/">{authorTitle}</a>
         </div>
-
-    </footer>
+    </footer >
 )
 footer.propTypes = {
     authorTitle: PropTypes.string,
