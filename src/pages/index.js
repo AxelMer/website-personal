@@ -8,9 +8,9 @@ import "../css/global.scss"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="AxTin" />
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-
+      
     </div>
     <Link to="/page-2/">siguiente 2</Link>
   </Layout>

@@ -62,37 +62,39 @@ body {
 
 
 //Header and Footer  Style variables
-$background: #2d3436;
-$backgroundHover: #2d3436;
-$padding: 1.5rem;
-$sizeFont: 24px;
+$background: #0e0f0f;
+$backgroundHover: #0e0f0f;
+$paddingFooter: 1.5rem;
+$sizeFontFooter: 20px;
+$sizeFontHeader: 24px;
 $textColor: #55efc4;
 $textHover: #ff7675;
-
+$decoration: none;
+$imagenSize: 3rem;
 .header{
     background: $background;
-    text-decoration: none;
+    text-decoration: $decoration;
+    font-size: $sizeFontHeader;
     .navbar{
         background: $background;
         .navbar-item{
             background: $backgroundHover;
             color:$textColor;
+            padding: 1rem;
         }
         .navbar-item:hover{
             color: $textHover;
         }
         .logo{
-            color: $textColor;
-        }.logo:hover{
-            color: $textHover;
+            width: $imagenSize;
         }
     }
 }
 .footer{
     background: $background;
-    padding: $padding;
-    font-size: $sizeFont;
-    text-decoration: none;
+    padding: $paddingFooter;
+    font-size: $sizeFontFooter;
+    text-decoration: $decoration;
     .author{
         color: $textColor;
     }.author:hover{
