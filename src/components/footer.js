@@ -5,15 +5,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import '../utils/fontawesome'
 import "../css/global.scss"
 
+
 const footer = ({ authorTitle }) => (
     <footer className="footer">
         <div className="level has-text-centered">
             <div className="level-item">
                 <div className="social has-text-centered">
-                    <a><i><FontAwesomeIcon icon={['fab', 'youtube']} size="2x" /></i></a>
+                    <a><i><FontAwesomeIcon icon={['fab', 'github']} size="2x" /></i></a>
                     <a><i><FontAwesomeIcon icon={['fab', 'twitter']} size="2x" /></i></a>
                     <a><i><FontAwesomeIcon icon={['fab', 'instagram']} size="2x" /></i></a>
-                    <a><i><FontAwesomeIcon icon={['fab', 'facebook']} size="2x" /></i></a>
+                    <a><i><FontAwesomeIcon icon={['fab', 'linkedin']} size="2x" /></i></a>
                 </div>
             </div>
         </div>

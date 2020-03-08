@@ -1,16 +1,9 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Footer from "./footer"
-import Header from "./header"
+import Header from "./navigation"
 import "../css/layout.scss"
 
 const Layout = ({ children }) => {
@@ -31,7 +24,7 @@ const Layout = ({ children }) => {
       <div
         style={{
           margin: `0 auto`,
-          maxWidth: 960,
+          maxWidth: 1180,
           padding: `0 1.0875rem 1.45rem`,
         }}
       >
@@ -47,3 +40,4 @@ Layout.propTypes = {
 }
 
 export default Layout
+
