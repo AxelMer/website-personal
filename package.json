@@ -1,11 +1,9 @@
 {
-  "name": "gatsby-contentful-starter",
+  "name": "website-person",
   "description": "Starter Contentful Gatsby Blog",
   "version": "1.0.0",
-  "author": "Stefan Judis <stefanjudis@gmail.com>",
-  "bugs": {
-    "url": "https://github.com/contentful-userland/gatsby-contentful-starter/issues"
-  },
+  "author": "Axel Mercado",
+ 
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.27",
     "@fortawesome/free-brands-svg-icons": "^5.12.1",
