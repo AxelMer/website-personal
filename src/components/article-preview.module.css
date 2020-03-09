@@ -12,3 +12,16 @@
   border: 1px solid #A0A0A0;
   margin-right: .5em;
 }
+article{
+  border: 1px solid #55efc4;
+  margin: 2rem;
+  max-width: 450px;
+  padding: 0.5rem;
+}article:hover{
+  border: 1px solid #ff7675;
+  -webkit-box-shadow: 0px 1px 16px -3px rgba(0,0,0,1);
+  -moz-box-shadow: 0px 1px 16px -3px rgba(0,0,0,1);
+  box-shadow: 0px 1px 16px -3px rgba(0,0,0,1);
+}
+
+

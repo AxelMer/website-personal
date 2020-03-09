@@ -5,7 +5,7 @@ import styles from './hero.module.css'
 
 export default ({ data }) => (
   <div className={styles.hero}>
-    <Img
+    <img
       className={styles.heroImage}
       alt={data.name}
       fluid={data.heroImage.fluid}

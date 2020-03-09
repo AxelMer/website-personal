@@ -135,12 +135,12 @@ $imagenSize: 3rem;
       padding: 0 40px;
 
       &:before {
-        content: '[';
+        content: '<';
         left: 0;
       }
   
       &:after {
-        content: ']';
+        content: '/>';
         position: absolute;
         right: 0;
       }
