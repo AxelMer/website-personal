@@ -1,8 +1,8 @@
 {
-  "name": "website-person",
+  "name": "gatsby-contentful-starter",
   "description": "Starter Contentful Gatsby Blog",
   "version": "1.0.0",
-  "author": "Axel Mercado",
+  "author": "Stefan Judis <stefanjudis@gmail.com>",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.27",
     "@fortawesome/free-brands-svg-icons": "^5.12.1",

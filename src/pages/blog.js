@@ -22,14 +22,15 @@ class BlogIndex extends React.Component {
     return (
       <Layout>
         <SEO title="Blog" />
-        <div className="columns is-mobile">
-          {posts.map(({ node }) => {
+        <div className="columns is-centered is-9">
+          <li> {posts.map(({ node }) => {
             return (
               <article key={node.slug}>
                 <ArticlePreview article={node} />
               </article>
             )
           })}
+          </li>
         </div>
       </Layout>
     )
@@ -53,7 +54,7 @@ export const pageQuery = graphql`
         publishDate(formatString: "MMMM Do, YYYY")
         tags
         heroImage {
-          fluid(maxHeight: 140, maxWidth: 450, resizingBehavior: SCALE) {
+          fluid(maxHeight: 150, maxWidth: 550, resizingBehavior: SCALE) {
             src
           }
         }

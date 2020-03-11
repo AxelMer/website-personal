@@ -76,8 +76,9 @@ $imagenSize: 3rem;
     background: $background;
     text-decoration: $decoration;
     font-size: $sizeFontHeader;
-    .navbar{
+    .navbar-menu{
         background: $background;
+        max-height: 15vh;
         .navbar-item{
             background: $backgroundHover;
             color:$textColor;
@@ -111,6 +112,7 @@ $imagenSize: 3rem;
 }
 
 .main{
+    overflow: auto;
     width: 1180px;
     height: 60vh;
 }
