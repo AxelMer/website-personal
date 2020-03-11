@@ -14,14 +14,7 @@ export default ({ article }) => (
             {article.title}
           </h4>
         </div>
-        <span>
-          <div class="content">
-
-          </div>
-
-        </span>
       </span>
-
       <nav class="level">
         <div class="level-left">
           <a class="level-item">
