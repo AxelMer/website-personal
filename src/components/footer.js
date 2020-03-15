@@ -11,10 +11,10 @@ const footer = ({ authorTitle }) => (
         <div className="level has-text-centered">
             <div className="level-item">
                 <div className="social has-text-centered">
-                    <a><i><FontAwesomeIcon icon={['fab', 'github']} size="2x" /></i></a>
-                    <a><i><FontAwesomeIcon icon={['fab', 'twitter']} size="2x" /></i></a>
-                    <a><i><FontAwesomeIcon icon={['fab', 'instagram']} size="2x" /></i></a>
-                    <a><i><FontAwesomeIcon icon={['fab', 'linkedin']} size="2x" /></i></a>
+                    <a href="https://github.com/Ammercado"><i><FontAwesomeIcon icon={['fab', 'github']} size="2x" /></i></a>
+                    <a href="https://twitter.com/"><i><FontAwesomeIcon icon={['fab', 'twitter']} size="2x" /></i></a>
+                    <a href="https://www.instagram.com/"><i><FontAwesomeIcon icon={['fab', 'instagram']} size="2x" /></i></a>
+                    <a href="https://www.linkedin.com/"><i><FontAwesomeIcon icon={['fab', 'linkedin']} size="2x" /></i></a>
                 </div>
             </div>
         </div>
