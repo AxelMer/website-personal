@@ -15,7 +15,7 @@ export default () => (
              <img className="logo is-vcentered" src={mySvg} />
           </div>
           <div className="navbar-start">
-            <Link to="/blog" className="navbar-item">Blog</Link>
+            <Link to="/proyectos" className="navbar-item">Proyectos</Link>
           </div>
         </div>
       </nav>

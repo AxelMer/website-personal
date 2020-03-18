@@ -17,20 +17,21 @@ import SEO from '../components/seo'
 class BlogIndex extends React.Component {
   render() {
     //const author = get(this, 'props.data.site.siteMetadata.author')
-    const posts = get(this, 'props.data.allContentfulBlogPost.edges')
+    const posts = get(this, 'props.data.allContentfulProyectos.edges')
 
     return (
       <Layout>
-        <SEO title="Blog" />
+        <SEO title="Proyectos"/>
         <div className="columns is-centered is-9">
-          <li> {posts.map(({ node }) => {
+          <ol>
+          {posts.map(({ node }) => {
             return (
-              <article key={node.slug}>
+              <article key={node.title}>
                 <ArticlePreview article={node} />
               </article>
             )
           })}
-          </li>
+          </ol>
         </div>
       </Layout>
     )
@@ -46,26 +47,22 @@ export const pageQuery = graphql`
       title
     }
   }
-  allContentfulBlogPost(sort: {fields: publishDate, order: DESC}) {
+  allContentfulProyectos(sort: {order: DESC}) {
     edges {
       node {
-        title
-        slug
-        publishDate(formatString: "MMMM Do, YYYY")
-        tags
-        heroImage {
-          fluid(maxHeight: 150, maxWidth: 550, resizingBehavior: SCALE) {
-            src
-          }
+        name
+        github
+        shortBio {
+          shortBio
         }
-        description {
-          childMarkdownRemark {
-            html
+        heroImage {
+          fluid {
+            src
           }
         }
       }
     }
   }
 }
-
 `
+       

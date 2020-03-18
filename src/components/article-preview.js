@@ -1,32 +1,25 @@
 import React from 'react'
-import { Link } from 'gatsby'
-
-
-import styles from './article-preview.module.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import '../utils/fontawesome'
+import  '../css/global.scss'
 
 export default ({ article }) => (
-  <Link to={`/blog/${article.slug}`}>
-    <div>
-        <img className="image" src={article.heroImage.fluid.src} />
-      <span>
-        <div>
-          <h4 className={styles.previewTitle}>
-            {article.title}
-          </h4>
-        </div>
-      </span>
-      <nav class="level">
-        <div class="level-left">
-          <a class="level-item">
-            {article.tags &&
-              article.tags.map(tag => (
-                <p className={styles.tag} key={tag}>
-                  {tag}
-                </p>
-              ))}
-          </a>
-        </div>
-      </nav>
+  <div>
+    <p className="previewTitle">
+      {article.name}
+    </p>
+    <img className="image" src={article.heroImage.fluid.src} />
+    <div className="cuerpo">
+      <p>
+        {article.shortBio.shortBio}
+      </p>
     </div>
-  </Link>
+    <div className="level-item">
+      <a href={article.github} className="has-text-centered">
+        <p className="tag">
+          <i><FontAwesomeIcon icon={['fab', 'github']}size="1x" /> Open Source</i>
+          </p>
+      </a>
+    </div>
+  </div>
 )

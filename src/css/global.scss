@@ -1,221 +1,340 @@
 @charset "utf-8";
 //Import elements bulma
-@import "../../node_modules/bulma/sass/utilities/_all.sass";
-@import "../../node_modules/bulma/sass/layout/_all.sass";
-@import "../../node_modules/bulma/sass/grid/_all.sass";
-@import "../../node_modules/bulma/sass/form/_all.sass";
-@import "../../node_modules/bulma/sass/elements/_all.sass";
-@import "../../node_modules/bulma/sass/components/_all.sass";
-@import "../../node_modules/bulma/sass/base/_all.sass";
-@import "../../node_modules/bulma/bulma.sass";
+@import '../../node_modules/bulma/sass/utilities/_all.sass';
+@import '../../node_modules/bulma/sass/layout/_all.sass';
+@import '../../node_modules/bulma/sass/grid/_all.sass';
+@import '../../node_modules/bulma/sass/form/_all.sass';
+@import '../../node_modules/bulma/sass/elements/_all.sass';
+@import '../../node_modules/bulma/sass/components/_all.sass';
+@import '../../node_modules/bulma/sass/base/_all.sass';
+@import '../../node_modules/bulma/bulma.sass';
 // Import a Google Font
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
 
-// Disable the widescreen breakpoint
-$widescreen-enabled: false;
-// Disable the fullhd breakpoint
-$fullhd-enabled: false;
-
 // Set your brand colors
-$purple: #fd00a9;
-$pink: #ff7675;
-$brown: #757763;
-$beige-light: #d0d1cd;
-$beige-lighter: #dfe6e9;
-$greenish:#55efc4;
-$yarrow:#fdcb6e;
-$breeze:#b2bec3;
-$black: #000000;
+$red: #ff7675;
+$green: #55efc4;
+$black: #0e0f0f;
 
-// Update Bulma's global variables
-$family-sans-serif: 'Nunito', sans-serif;
-$widescreen-enabled: false;
-$fullhd-enabled: false;
-$scheme-main: $purple;
-$background: hsl(0, 0%, 86%);
-$primary: $purple;
-$link: $blue;
-$info: $cyan;
-$success: $green;
-$warning: $yellow;
-$danger: $red;
-$dark: $grey-darker;
-$text: $grey-dark;
-$background: $pink;
-$scheme-main-bis: $purple;
-// Update some of Bulma's component variables
-$body-background-color: $breeze;
-$control-border-width: 2px;
-$input-border-color: transparent;
-$input-shadow: none;
-$box-background-color: $scheme-main;
-$message-header-padding:0.75em;
-$message-background-color: $background;
-$navbar-item-hover-background-color: $scheme-main-bis;
-$font-stack: Helvetica, sans-serif;
-$background-primary: #000000;
+//Header / Footer / Article variables Style
+$bColor: $black;
+$pFooter: 1.5rem;
+$sFontFooter: 20px;
+$sFontHeader: 24px;
+$tColor: $green;
+$tHover: $red;
+$decoration: none;
+$imSize: 3rem;
+$p:0.5rem;
+//Border Configure
+$sBorder: 1px;
+$cBorder: $green;
+$cHover: $red;
+$bStyle: solid;
 
 body {
-    background: $black;
-    margin-bottom: 1.45rem;
+  margin-bottom: 1.45rem;
 }
 
-
-//Header and Footer  Style variables
-$background: #0e0f0f;
-$backgroundHover: #0e0f0f;
-$paddingFooter: 1.5rem;
-$sizeFontFooter: 20px;
-$sizeFontHeader: 24px;
-$textColor: #55efc4;
-$textHover: #ff7675;
-$decoration: none;
-$imagenSize: 3rem;
-
-.header{
-    background: $background;
-    text-decoration: $decoration;
-    font-size: $sizeFontHeader;
-    .navbar-menu{
-        background: $background;
-        max-height: 15vh;
-        .navbar-item{
-            background: $backgroundHover;
-            color:$textColor;
-            padding: 1.5rem;
-        }
-        .navbar-item:hover{
-            color: $textHover;
-        }
-        .logo{
-            width: $imagenSize;
-        }
+.header {
+  background: $bColor;
+  text-decoration: $decoration;
+  font-size: $sFontHeader;
+  .navbar-menu {
+    background: $bColor;
+    max-height: 15vh;
+    .navbar-item {
+      background: $bColor;
+      color: $tColor;
+      padding: 1.5rem;
     }
+    .navbar-item:hover {
+      color: $tHover;
+    }
+    .logo {
+      width: $imSize;
+    }
+  }
 }
-.footer{
-    background: $background;
-    padding: $paddingFooter;
-    font-size: $sizeFontFooter;
-    text-decoration: $decoration;
-    .author{
-        color: $textColor;
-    }.author:hover{
-        color: $textHover
-    }
-    i{
-        color: $textColor;
-        padding: 1rem;
-        margin: 1rem;
-    }i:hover{
-        color: $textHover;
-    }
+.footer {
+  background: $bColor;
+  padding: $pFooter;
+  font-size: $sFontFooter;
+  text-decoration: $decoration;
+  .author {
+    color: $tColor;
+  }
+  .author:hover {
+    color: $tHover;
+  }
+  i {
+    color: $tColor;
+    padding: 1rem;
+    margin: 1rem;
+  }
+  i:hover {
+    color: $tHover;
+  }
 }
 
-.main{
-    overflow: auto;
-    width: 1180px;
-    height: 60vh;
+.main {
+  overflow: auto;
+  width: 1180px;
+  height: 60vh;
 }
 
 .content {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top:50%;
-    left: 50%;
-    height: 160px;
-    overflow:hidden;
-    
-    font-family: 'Lato', sans-serif;
-    font-size: 35px;
-    line-height: 40px;
-    color: $textColor;
-    
-    &__container {
-      font-weight: 600;
-      overflow: hidden;
-      height: 40px;
-      padding: 0 40px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  height: 160px;
+  overflow: hidden;
 
-      &:before {
-        content: '<';
-        left: 0;
-      }
-  
-      &:after {
-        content: '/>';
-        position: absolute;
-        right: 0;
-      }
-  
-      &:after, &:before {
-        position: absolute;
-        top: 0;
-        
-        color: $textHover;
-        font-size: 42px;
-        line-height: 40px;
-        
-        -webkit-animation-name: opacity;
-        -webkit-animation-duration: 2s;
-        -webkit-animation-iteration-count: infinite;
-        animation-name: opacity;
-        animation-duration: 2s;
-        animation-iteration-count: infinite;
-      }
+  font-family: 'Lato', sans-serif;
+  font-size: 35px;
+  line-height: 40px;
+  color: $tColor;
+
+  &__container {
+    font-weight: 600;
+    overflow: hidden;
+    height: 40px;
+    padding: 0 40px;
+
+    &:before {
+      content: '<';
+      left: 0;
+    }
+
+    &:after {
+      content: '/>';
+      position: absolute;
+      right: 0;
+    }
+
+    &:after,
+    &:before {
+      position: absolute;
+      top: 0;
+
+      color: $tHover;
+      font-size: 42px;
+      line-height: 40px;
+
+      -webkit-animation-name: opacity;
+      -webkit-animation-duration: 2s;
+      -webkit-animation-iteration-count: infinite;
+      animation-name: opacity;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
     }
   }
+}
+article {
+  overflow: hidden;
+  border: $sBorder $bStyle $cBorder;
+  margin: 1rem;
+  padding: $p;
+  border-radius: 5px;
+  .previewTitle {
+    font-size: 2em;
+    color: $tColor;
+    text-align: center;
+  }
+  .cuerpo {
+    max-width: 350px;
+    color: $tColor;
+    font-size: 14px;
+  }
+  .image {
+    filter: opacity(0.2);
+    min-height: 150px;
+    max-width: 370px;
+    border: 2px $bStyle cornsilk;
+    border-radius: 6px;
+  }
+  .tag {
+    color: $tColor;
+    background: $bColor;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.33333rem 0.5rem;
+    line-height: 1;
+    border-radius: 2px;
+    border: 1px $bStyle $tColor;
+    margin-right: 0.5em;
+  }
+}
+article:hover {
+  border: $sBorder $bStyle $cHover;
+  -webkit-box-shadow: 0px 1px 16px -3px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 0px 1px 16px -3px rgba(0, 0, 0, 1);
+  box-shadow: 0px 1px 16px -3px rgba(0, 0, 0, 1);
+  -webkit-transform: scale(1.01);
+  transform: scale(1.01);
+  .tag:hover {
+    border: $sBorder $bStyle $cHover;
+    color: $tHover;
+  }
+}
+
+
+
+
+
+
+
+
+
 @-webkit-keyframes opacity {
-  0%, 100% {opacity:0;}
-  50% {opacity:1;}
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
 }
 
 @-webkit-keyframes change {
-  0%, 12.66%, 100% {transform:translate3d(0,0,0);}
-  16.66%, 29.32% {transform:translate3d(0,-25%,0);}
-  33.32%,45.98% {transform:translate3d(0,-50%,0);}
-  49.98%,62.64% {transform:translate3d(0,-75%,0);}
-  66.64%,79.3% {transform:translate3d(0,-50%,0);}
-  83.3%,95.96% {transform:translate3d(0,-25%,0);}
+  0%,
+  12.66%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  16.66%,
+  29.32% {
+    transform: translate3d(0, -25%, 0);
+  }
+  33.32%,
+  45.98% {
+    transform: translate3d(0, -50%, 0);
+  }
+  49.98%,
+  62.64% {
+    transform: translate3d(0, -75%, 0);
+  }
+  66.64%,
+  79.3% {
+    transform: translate3d(0, -50%, 0);
+  }
+  83.3%,
+  95.96% {
+    transform: translate3d(0, -25%, 0);
+  }
 }
 
 @-o-keyframes opacity {
-  0%, 100% {opacity:0;}
-  50% {opacity:1;}
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
 }
 
 @-o-keyframes change {
-  0%, 12.66%, 100% {transform:translate3d(0,0,0);}
-  16.66%, 29.32% {transform:translate3d(0,-25%,0);}
-  33.32%,45.98% {transform:translate3d(0,-50%,0);}
-  49.98%,62.64% {transform:translate3d(0,-75%,0);}
-  66.64%,79.3% {transform:translate3d(0,-50%,0);}
-  83.3%,95.96% {transform:translate3d(0,-25%,0);}
+  0%,
+  12.66%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  16.66%,
+  29.32% {
+    transform: translate3d(0, -25%, 0);
+  }
+  33.32%,
+  45.98% {
+    transform: translate3d(0, -50%, 0);
+  }
+  49.98%,
+  62.64% {
+    transform: translate3d(0, -75%, 0);
+  }
+  66.64%,
+  79.3% {
+    transform: translate3d(0, -50%, 0);
+  }
+  83.3%,
+  95.96% {
+    transform: translate3d(0, -25%, 0);
+  }
 }
 
 @-moz-keyframes opacity {
-  0%, 100% {opacity:0;}
-  50% {opacity:1;}
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
 }
 
 @-moz-keyframes change {
-  0%, 12.66%, 100% {transform:translate3d(0,0,0);}
-  16.66%, 29.32% {transform:translate3d(0,-25%,0);}
-  33.32%,45.98% {transform:translate3d(0,-50%,0);}
-  49.98%,62.64% {transform:translate3d(0,-75%,0);}
-  66.64%,79.3% {transform:translate3d(0,-50%,0);}
-  83.3%,95.96% {transform:translate3d(0,-25%,0);}
+  0%,
+  12.66%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  16.66%,
+  29.32% {
+    transform: translate3d(0, -25%, 0);
+  }
+  33.32%,
+  45.98% {
+    transform: translate3d(0, -50%, 0);
+  }
+  49.98%,
+  62.64% {
+    transform: translate3d(0, -75%, 0);
+  }
+  66.64%,
+  79.3% {
+    transform: translate3d(0, -50%, 0);
+  }
+  83.3%,
+  95.96% {
+    transform: translate3d(0, -25%, 0);
+  }
 }
 
 @keyframes opacity {
-  0%, 100% {opacity:0;}
-  50% {opacity:1;}
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
 }
 
 @keyframes change {
-  0%, 12.66%, 100% {transform:translate3d(0,0,0);}
-  16.66%, 29.32% {transform:translate3d(0,-25%,0);}
-  33.32%,45.98% {transform:translate3d(0,-50%,0);}
-  49.98%,62.64% {transform:translate3d(0,-75%,0);}
-  66.64%,79.3% {transform:translate3d(0,-50%,0);}
-  83.3%,95.96% {transform:translate3d(0,-25%,0);}
+  0%,
+  12.66%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  16.66%,
+  29.32% {
+    transform: translate3d(0, -25%, 0);
+  }
+  33.32%,
+  45.98% {
+    transform: translate3d(0, -50%, 0);
+  }
+  49.98%,
+  62.64% {
+    transform: translate3d(0, -75%, 0);
+  }
+  66.64%,
+  79.3% {
+    transform: translate3d(0, -50%, 0);
+  }
+  83.3%,
+  95.96% {
+    transform: translate3d(0, -25%, 0);
+  }
 }

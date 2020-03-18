@@ -18,7 +18,7 @@ if (!spaceId || !accessToken) {
 
 module.exports = {
   siteMetadata: {
-    title: 'Developer',
+    title: 'Axel Web Developer',
     description: ` Este diseño es una practica en conocimientos gatsby + bulma + sass`,
     author: `AxTin`,
   },
