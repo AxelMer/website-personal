@@ -68,4 +68,4 @@ public
 .env*
 !.env.example
 .netlify
-static
+src/components/base
